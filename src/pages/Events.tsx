@@ -4,6 +4,8 @@ import republicDayImg from '../assets/images/independence-celebration-leaders.jp
 import galaImg from '../assets/images/formal-event-chandelier.jpeg'
 import communityImg from '../assets/images/community-gathering-large.jpeg'
 import culturalImg from '../assets/images/cultural-event-red-black.jpeg'
+import radioImg1 from '../assets/images/radio-interview-1.jpeg'
+import radioImg2 from '../assets/images/radio-interview-2.jpeg'
 
 export default function Events() {
   const events = [
@@ -161,6 +163,20 @@ export default function Events() {
             <img
               src={culturalImg}
               alt="Cultural celebration in red and black traditional wear"
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="glass overflow-hidden group h-36 md:h-full">
+            <img
+              src={radioImg1}
+              alt="GNC leadership on radio interview discussing community"
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="glass overflow-hidden group h-36 md:h-full">
+            <img
+              src={radioImg2}
+              alt="Radio studio interview with GNC representatives"
               className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
