@@ -242,24 +242,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery CTA */}
-      <section className="py-20">
-        <div className="glass-lg p-12 text-center">
-          <h2 className="heading-2 mb-4">Join the GNC Community</h2>
-          <p className="body-lg mb-8 max-w-2xl mx-auto">
-            Be part of our cultural events, leadership programs, and community initiatives. Create your own GNC moments.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary inline-flex items-center justify-center gap-2">
-              Become a Member
-            </Link>
-            <Link to="/events" className="btn-secondary inline-flex items-center justify-center gap-2">
-              View Events
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Lightbox Modal */}
       {lightboxOpen && (
         <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4" onClick={() => setLightboxOpen(false)}>
@@ -324,36 +306,6 @@ export default function Home() {
           ))}
         </div>
         <Link to="/events" className="btn-secondary">View All Events</Link>
-      </section>
-
-      {/* Section divider */}
-      <div className="section-divider"></div>
-
-      {/* Featured Events Carousel */}
-      <section className="py-20 animate-section-reveal">
-        <h2 className="heading-2 mb-4">Featured Events This Season</h2>
-        <p className="body-lg mb-12 max-w-2xl">
-          Experience the energy and culture of GNC's most celebrated events. From grand festivals to intimate gatherings, there's something for everyone.
-        </p>
-
-        <div className="overflow-x-auto pb-6 scroll-smooth">
-          <div className="flex gap-6 min-w-max">
-            {[
-              { title: 'GhanaFest 2026', date: 'July 25', desc: 'The largest celebration of Ghanaian culture in the Midwest', icon: '🎭' },
-              { title: 'Republic Day', date: 'March 1', desc: 'Commemorate Ghana\'s independence with traditions & pride', icon: '🇬🇭' },
-              { title: 'Youth Leadership Summit', date: 'August 10-12', desc: 'Empower the next generation of community leaders', icon: '🚀' },
-              { title: 'Cultural Nights', date: 'Monthly', desc: 'Dance, music, and traditional performances', icon: '🎵' },
-              { title: 'Business Networking', date: 'Quarterly', desc: 'Connect with Ghanaian entrepreneurs & professionals', icon: '💼' },
-            ].map((event, i) => (
-              <div key={i} className="card-lg flex-shrink-0 w-96 group">
-                <div className="text-5xl mb-4">{event.icon}</div>
-                <h3 className="text-2xl font-semibold mb-2 group-hover:text-gold-400 transition">{event.title}</h3>
-                <p className="text-gold-400 text-sm font-semibold mb-3">{event.date}</p>
-                <p className="text-gray-300">{event.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Section divider */}
