@@ -12,6 +12,7 @@ export default function Navigation() {
     { name: 'Community Services', path: '/services' },
     { name: 'Health Clinic', path: '/health-clinic' },
     { name: 'GNC News', path: '/news' },
+    { name: 'Recipes', path: '/recipes' },
     { name: 'GhanaFest', path: '/events' },
     { name: 'Contact Us', path: '/contact' },
   ]

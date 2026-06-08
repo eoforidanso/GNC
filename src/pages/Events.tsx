@@ -34,6 +34,15 @@ export default function Events() {
       date: 'May 23-24, 2026',
       location: 'Various Locations',
       desc: 'Annual gathering for members of the Asanteman Association featuring cultural events and networking.',
+      image: asantemanImg1,
+      featured: false
+    },
+    {
+      name: 'Ghana Flag Raising Ceremony',
+      date: 'March 6, 2026',
+      location: 'Chicago, IL',
+      desc: 'Annual flag raising ceremony celebrating Ghana\'s independence, hosted by GNC Chicago.',
+      image: flagRaisingImg,
       featured: false
     },
     {
@@ -84,7 +93,7 @@ export default function Events() {
                     src={event.image}
                     alt={event.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                    style={event.objectPosition ? { objectPosition: event.objectPosition } : undefined}
+                    style={(event as any).objectPosition ? { objectPosition: (event as any).objectPosition } : undefined}
                   />
                 </div>
                 <div className="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-400 text-xs font-semibold mb-4">
@@ -116,7 +125,16 @@ export default function Events() {
         <h2 className="heading-3 mb-12">More Events</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {upcomingEvents.map((event, i) => (
-            <div key={i} className="card group">
+            <div key={i} className="card group overflow-hidden">
+              {(event as any).image && (
+                <div className="-mx-8 -mt-8 mb-6 h-48 overflow-hidden">
+                  <img
+                    src={(event as any).image}
+                    alt={event.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  />
+                </div>
+              )}
               <h3 className="font-semibold mb-4 group-hover:text-gold-400 transition">{event.name}</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -140,34 +158,33 @@ export default function Events() {
         <p className="body-lg mb-12 max-w-2xl">
           Relive the energy and elegance of our past celebrations — from the Independence Dinner Dance to community galas.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="glass overflow-hidden group col-span-2 row-span-2 h-full min-h-72">
-            <img
-              src={dinnerDanceImg}
-              alt="GNC Independence Dinner Dance 2026 — Celebrating Ghana at 69"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px]">
+          <div className="glass overflow-hidden group col-span-2 row-span-2">
+            <img src={dinnerDanceImg} alt="GNC Independence Dinner Dance 2026" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
           </div>
-          <div className="glass overflow-hidden group h-36 md:h-full">
-            <img
-              src={galaImg}
-              alt="Formal gala evening with chandelier"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
+          <div className="glass overflow-hidden group">
+            <img src={galaImg} alt="Formal gala evening" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
           </div>
-          <div className="glass overflow-hidden group h-36 md:h-full">
-            <img
-              src={communityImg}
-              alt="Large community gathering at a GNC event"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
+          <div className="glass overflow-hidden group">
+            <img src={communityImg} alt="Community gathering" className="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition duration-500" />
           </div>
-          <div className="glass overflow-hidden group h-36 md:h-full col-span-2 md:col-span-1">
-            <img
-              src={culturalImg}
-              alt="Cultural celebration in red and black traditional wear"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-            />
+          <div className="glass overflow-hidden group">
+            <img src={culturalImg} alt="Cultural celebration" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div className="glass overflow-hidden group">
+            <img src={radioImg1} alt="Radio interview" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div className="glass overflow-hidden group col-span-2 row-span-2">
+            <img src={flagRaisingImg} alt="Flag raising ceremony" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div className="glass overflow-hidden group">
+            <img src={radioImg2} alt="Radio studio interview" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div className="glass overflow-hidden group">
+            <img src={asantemanImg1} alt="Asanteman PopUp event" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div className="glass overflow-hidden group">
+            <img src={asantemanImg2} alt="Asanteman PopUp event 2" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
           </div>
           <div className="glass overflow-hidden group h-36 md:h-full">
             <img
