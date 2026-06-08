@@ -2,7 +2,6 @@ import { Calendar, MapPin } from 'lucide-react'
 import dinnerDanceImg from '../assets/images/independence-dinner-dance-2026.jpeg'
 import republicDayImg from '../assets/images/independence-celebration-leaders.jpeg'
 import galaImg from '../assets/images/formal-event-chandelier.jpeg'
-import groupCelebrationImg from '../assets/images/independence-celebration-group.jpeg'
 import communityImg from '../assets/images/community-gathering-large.jpeg'
 import culturalImg from '../assets/images/cultural-event-red-black.jpeg'
 
@@ -14,7 +13,7 @@ export default function Events() {
       location: 'Grant Park, Chicago',
       desc: 'The largest celebration of Ghanaian culture in the Midwest. Three days of music, food, dance, and cultural showcase.',
       image: communityImg,
-      objectPosition: 'center center',
+      objectPosition: 'center 35%',
       featured: true
     },
     {
