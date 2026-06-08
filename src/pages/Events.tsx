@@ -6,6 +6,9 @@ import communityImg from '../assets/images/community-gathering-large.jpeg'
 import culturalImg from '../assets/images/cultural-event-red-black.jpeg'
 import radioImg1 from '../assets/images/radio-interview-1.jpeg'
 import radioImg2 from '../assets/images/radio-interview-2.jpeg'
+import asantemanImg1 from '../assets/images/asanteman-popup.avif'
+import asantemanImg2 from '../assets/images/asanteman-popup-2.avif'
+import flagRaisingImg from '../assets/images/flag-raising.avif'
 
 export default function Events() {
   const events = [
@@ -177,6 +180,27 @@ export default function Events() {
             <img
               src={radioImg2}
               alt="Radio studio interview with GNC representatives"
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="glass overflow-hidden group h-36 md:h-full col-span-2 row-span-2">
+            <img
+              src={flagRaisingImg}
+              alt="GNC flag raising ceremony"
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="glass overflow-hidden group h-36 md:h-full">
+            <img
+              src={asantemanImg1}
+              alt="Asanteman Association popup event"
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="glass overflow-hidden group h-36 md:h-full">
+            <img
+              src={asantemanImg2}
+              alt="Asanteman Association cultural celebration"
               className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
