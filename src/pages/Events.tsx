@@ -13,7 +13,8 @@ export default function Events() {
       date: 'July 25, 2026',
       location: 'Grant Park, Chicago',
       desc: 'The largest celebration of Ghanaian culture in the Midwest. Three days of music, food, dance, and cultural showcase.',
-      image: groupCelebrationImg,
+      image: communityImg,
+      objectPosition: 'center center',
       featured: true
     },
     {
@@ -79,6 +80,7 @@ export default function Events() {
                     src={event.image}
                     alt={event.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    style={event.objectPosition ? { objectPosition: event.objectPosition } : undefined}
                   />
                 </div>
                 <div className="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-400 text-xs font-semibold mb-4">
