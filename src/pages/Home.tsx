@@ -174,11 +174,12 @@ export default function Home() {
       <div className="section-divider"></div>
 
       {/* Features */}
-      <section className="py-20 grid md:grid-cols-3 gap-6 pattern-kente animate-section-reveal">
+      <section className="py-20 grid md:grid-cols-3 gap-6 animate-section-reveal">
         {features.map((feature, i) => {
           const Icon = feature.icon
           return (
-            <div key={i} className="card group">
+            <div key={i} className="card-kente group">
+              <div className="card-kente-stripe"></div>
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4 group-hover:scale-110 transition">
                 <Icon size={24} className="text-slate-900" />
               </div>

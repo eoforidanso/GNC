@@ -300,6 +300,67 @@
       repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(0, 122, 94, 0.03) 35px, rgba(0, 122, 94, 0.03) 70px);
   }
 
+  /* Kente weave card */
+  .card-kente {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    background: rgba(15, 20, 35, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 204, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-kente::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg,   transparent 0px, transparent 6px, rgba(206,17,38,0.18) 6px, rgba(206,17,38,0.18) 8px),
+      repeating-linear-gradient(90deg,  transparent 0px, transparent 6px, rgba(255,204,0,0.14) 6px, rgba(255,204,0,0.14) 8px),
+      repeating-linear-gradient(0deg,   transparent 0px, transparent 22px, rgba(0,122,94,0.12) 22px, rgba(0,122,94,0.12) 24px),
+      repeating-linear-gradient(90deg,  transparent 0px, transparent 22px, rgba(206,17,38,0.10) 22px, rgba(206,17,38,0.10) 24px),
+      repeating-linear-gradient(45deg,  transparent 0px, transparent 14px, rgba(255,204,0,0.08) 14px, rgba(255,204,0,0.08) 16px),
+      repeating-linear-gradient(-45deg, transparent 0px, transparent 14px, rgba(0,122,94,0.08) 14px, rgba(0,122,94,0.08) 16px);
+    opacity: 0.9;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .card-kente::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,204,0,0.06) 0%, transparent 50%, rgba(206,17,38,0.06) 100%);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .card-kente > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-kente:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 12px 32px rgba(0,0,0,0.4),
+      0 0 0 1px rgba(255,204,0,0.45),
+      0 0 24px rgba(255,204,0,0.15);
+  }
+
+  /* Top accent stripe — Ghana flag colors */
+  .card-kente-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ce1126 33.3%, #ffcc00 33.3% 66.6%, #007a5e 66.6%);
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+
   /* Heritage badge styling */
   .heritage-badge {
     @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold;
