@@ -13,7 +13,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/GNC">
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-950 via-blue-900/20 to-slate-950">
         <Navigation />
         <main className="flex-1">
