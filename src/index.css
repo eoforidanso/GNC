@@ -464,6 +464,25 @@
     margin: 1.5rem 0;
   }
 
+  /* Mobile hero adjustments */
+  @media (max-width: 767px) {
+    .heading-1 {
+      font-size: 1.9rem;
+      line-height: 2.3rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .heritage-item {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.75rem;
+    }
+
+    .heritage-cluster {
+      gap: 0.5rem;
+    }
+  }
+
   /* Ghana flag gradient divider behind text */
   .ghana-gradient-bg {
     position: relative;

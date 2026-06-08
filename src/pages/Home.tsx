@@ -95,20 +95,19 @@ export default function Home() {
     <div className="max-w-7xl mx-auto px-6 pb-20">
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden"
+        className="relative py-16 md:py-32 min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden bg-scroll md:bg-fixed"
         style={{
           backgroundImage: `url(${freedomImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundPosition: 'center top',
         }}
       >
         {/* Faded overlay */}
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.25)' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-black/25"></div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center md:text-left" ref={heroRef}>
-          <div className="hero-text-block">
+          <div className="hero-text-block mx-auto md:mx-0 flex flex-col items-center md:items-start">
             <h1 className="heading-1 heading-premium mb-2 animate-fade-up">
               United in Heritage,
               <span className="bg-gradient-to-r from-gold-400 to-gold-500 bg-clip-text text-transparent"> Empowered in diaspora</span>
@@ -123,11 +122,11 @@ export default function Home() {
             <p className="body-lg mb-8 animate-slide-in max-w-2xl mx-auto md:mx-0" style={{ animationDelay: '0.2s' }}>
               Ghana National Council of Metropolitan Chicago unites Ghanaians in the greater Chicago area through cultural preservation, civic engagement, and social advancement.
             </p>
-            <div className="hero-buttons flex flex-col sm:flex-row gap-4 animate-fade-up justify-center md:justify-start" style={{ animationDelay: '0.4s' }}>
-              <Link to="/about" className="btn-primary inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+            <div className="hero-buttons flex flex-col sm:flex-row gap-4 animate-fade-up items-center md:items-start justify-center md:justify-start w-full" style={{ animationDelay: '0.4s' }}>
+              <Link to="/about" className="btn-primary inline-flex items-center justify-center gap-2 w-full max-w-[320px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
                 Learn More <ArrowRight size={20} />
               </Link>
-              <Link to="/events" className="btn-secondary inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+              <Link to="/events" className="btn-secondary inline-flex items-center justify-center gap-2 w-full max-w-[320px] mx-auto sm:w-auto sm:max-w-none sm:mx-0">
                 View Events
               </Link>
             </div>

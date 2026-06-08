@@ -40,8 +40,8 @@ export default function Contact() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Contact Details */}
           <div className="space-y-6">
-            <div className="card">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4">
+            <div className="card text-center md:text-left">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Phone size={24} className="text-slate-900" />
               </div>
               <h3 className="font-semibold mb-2">Phone</h3>
@@ -49,8 +49,8 @@ export default function Contact() {
               <p className="text-gray-400 text-sm mt-2">Mon-Fri: 9am-5pm CST</p>
             </div>
 
-            <div className="card">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4">
+            <div className="card text-center md:text-left">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Mail size={24} className="text-slate-900" />
               </div>
               <h3 className="font-semibold mb-2">Email</h3>
@@ -58,8 +58,8 @@ export default function Contact() {
               <p className="text-gray-400 text-sm mt-2">We respond within 24 hours</p>
             </div>
 
-            <div className="card">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4">
+            <div className="card text-center md:text-left">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <MapPin size={24} className="text-slate-900" />
               </div>
               <h3 className="font-semibold mb-2">Location</h3>
@@ -67,8 +67,8 @@ export default function Contact() {
               <p className="text-gray-400 text-sm mt-2">Greater Chicagoland Area</p>
             </div>
 
-            <div className="card">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4">
+            <div className="card text-center md:text-left">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-500 flex items-center justify-center mb-4 mx-auto md:mx-0">
                 <Clock size={24} className="text-slate-900" />
               </div>
               <h3 className="font-semibold mb-2">Hours</h3>
