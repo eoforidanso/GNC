@@ -45,16 +45,16 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li className="flex items-start gap-2">
-                <Phone size={16} className="mt-0.5 text-gold-400 flex-shrink-0" />
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <Phone size={16} className="text-gold-400 flex-shrink-0" />
                 <span>(773) XXX-XXXX</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Mail size={16} className="mt-0.5 text-gold-400 flex-shrink-0" />
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <Mail size={16} className="text-gold-400 flex-shrink-0" />
                 <span>info@gnc-chicago.org</span>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 text-gold-400 flex-shrink-0" />
+              <li className="flex items-center justify-center md:justify-start gap-2">
+                <MapPin size={16} className="text-gold-400 flex-shrink-0" />
                 <span>Chicago, IL</span>
               </li>
             </ul>
