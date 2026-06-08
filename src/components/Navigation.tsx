@@ -16,11 +16,6 @@ export default function Navigation() {
     { name: 'Contact Us', path: '/contact' },
   ]
 
-  const secondaryLinks = [
-    { name: 'Recipes', path: '/recipes' },
-    { name: 'Directory', path: '/directory' },
-  ]
-
   return (
     <nav className="glass-sm sticky top-0 z-50 mb-8">
       <div className="max-w-7xl mx-auto px-6 py-4">
