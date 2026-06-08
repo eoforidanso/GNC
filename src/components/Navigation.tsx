@@ -7,14 +7,13 @@ export default function Navigation() {
 
   const links = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: 'About Us', path: '/about' },
     { name: 'Affiliates', path: '/affiliates' },
-    { name: 'Services', path: '/services' },
-    { name: 'Events', path: '/events' },
-    { name: 'Recipes', path: '/recipes' },
-    { name: 'Directory', path: '/directory' },
-    { name: 'News', path: '/news' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Community Services', path: '/services' },
+    { name: 'Health Clinic', path: '/health-clinic' },
+    { name: 'GNC News', path: '/news' },
+    { name: 'GhanaFest', path: '/events' },
+    { name: 'Contact Us', path: '/contact' },
   ]
 
   return (
