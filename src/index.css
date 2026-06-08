@@ -1,0 +1,482 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Glass morphism components */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+
+  .glass-sm {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl;
+  }
+
+  .glass-lg {
+    @apply bg-white/15 backdrop-blur-lg border border-white/30 rounded-3xl;
+  }
+
+  /* Apple-style buttons */
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, #d4a017, #f5c542);
+    color: #111827;
+    box-shadow: 0 0 20px rgba(212, 160, 23, 0.4), 0 8px 16px rgba(212, 160, 23, 0.25);
+    @apply active:scale-95;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(212, 160, 23, 0.6), 0 12px 20px rgba(212, 160, 23, 0.35);
+    transform: translateY(-3px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    color: #f3f4f6;
+    @apply active:scale-95;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 204, 0, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.25);
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-lg font-medium transition-all;
+    @apply hover:bg-white/5;
+  }
+
+  /* Brand Typography Scale */
+  .display {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .heading-1 {
+    font-size: 4.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .heading-2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .heading-3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .body-lg {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(209, 213, 219);
+    margin-bottom: 1.75rem;
+  }
+
+  .body-sm {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(156, 163, 175);
+  }
+
+  /* Global spacing system */
+  /* Desktop: 6rem, Tablet: 4rem, Mobile: 3rem */
+  section {
+    @apply py-24 md:py-16 sm:py-12;
+  }
+
+  /* Card spacing: 2.5rem */
+  .card,
+  .card-lg {
+    @apply mb-10;
+  }
+
+  /* Hero bottom margin: 8rem */
+  .hero-background {
+    @apply mb-32;
+  }
+
+  /* Vertical rhythm: 1.25× baseline */
+  h1, h2, h3, h4, h5, h6 {
+    @apply mb-6;
+  }
+
+  p {
+    @apply mb-5;
+  }
+
+  ul, ol {
+    @apply mb-6;
+  }
+
+  /* Image positioning to preserve faces */
+  img {
+    object-position: center top;
+  }
+
+  /* Card components */
+  .card {
+    @apply glass p-6 hover:bg-white/15 transition-all duration-300;
+  }
+
+  .card-lg {
+    @apply glass-lg p-8;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-floating {
+    animation: floating 3.5s ease-in-out infinite;
+  }
+
+  @keyframes scrollIndicator {
+    0%, 100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(8px);
+    }
+  }
+
+  @keyframes accentGlow {
+    0%, 100% {
+      box-shadow: 0 0 8px rgba(206, 17, 38, 0.6), 0 0 16px rgba(255, 204, 0, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(206, 17, 38, 0.8), 0 0 24px rgba(255, 204, 0, 0.6);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+  .animate-floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .animate-scroll-indicator {
+    animation: scrollIndicator 2s ease-in-out infinite;
+  }
+
+  /* Cultural accent line */
+  .accent-line {
+    height: 2px;
+    width: 120px;
+    background: linear-gradient(90deg, #ce1126 0%, #ffcc00 50%, #007a5e 100%);
+    box-shadow: 0 0 12px rgba(206, 17, 38, 0.6), 0 0 24px rgba(255, 204, 0, 0.4);
+    animation: accentGlow 3s ease-in-out infinite;
+    margin: 12px 0;
+  }
+
+  /* Hero background enhancement */
+  .hero-background {
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.35) 85%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+  }
+
+  .hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(255, 204, 0, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(0, 122, 94, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Heading text shadow for contrast */
+  .heading-premium {
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Stats card styling */
+  .stat-card {
+    @apply glass p-6 text-center hover:bg-white/15 transition-all duration-300;
+    @apply hover:scale-105;
+  }
+
+  .stat-number {
+    @apply text-3xl md:text-4xl font-bold bg-gradient-to-r from-gold-400 to-gold-500 bg-clip-text text-transparent;
+  }
+
+  .stat-label {
+    @apply text-gray-400 text-sm mt-2;
+  }
+
+  /* Section divider with Ghana colors */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ce1126, #ffcc00, #007a5e, transparent);
+    margin: 4rem 0;
+    opacity: 0.6;
+  }
+
+  /* Kente-inspired micro-pattern background */
+  .pattern-kente {
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(206, 17, 38, 0.03) 35px, rgba(206, 17, 38, 0.03) 70px),
+      repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 204, 0, 0.03) 35px, rgba(255, 204, 0, 0.03) 70px),
+      repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(0, 122, 94, 0.03) 35px, rgba(0, 122, 94, 0.03) 70px);
+  }
+
+  /* Heritage badge styling */
+  .heritage-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(255, 204, 0, 0.1);
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    color: #fbbf24;
+  }
+
+  /* Gold geometric accent line */
+  .gold-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a017, #f5c542, #d4a017, transparent);
+    opacity: 0.7;
+    margin: 3rem 0;
+  }
+
+  /* Cinematic section reveal */
+  @keyframes sectionReveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-section-reveal {
+    animation: sectionReveal 0.8s ease-out forwards;
+  }
+
+  /* Parallax effect */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Premium hero image styling */
+  .hero-image {
+    border-radius: 20px;
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.35),
+      0 0 40px rgba(255, 204, 0, 0.25),
+      inset 0 0 60px rgba(255, 204, 0, 0.1);
+    border: 1.5px solid rgba(212, 160, 23, 0.4);
+    overflow: hidden;
+    transform: rotateZ(-1.5deg) perspective(1200px) rotateX(2deg);
+    transition: transform 0.3s ease;
+  }
+
+  .hero-image:hover {
+    transform: rotateZ(-1.5deg) perspective(1200px) rotateX(3deg) scale(1.02);
+  }
+
+  /* Micro-narrative styling */
+  .micro-narrative {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+
+  .micro-narrative.highlight {
+    color: #f5c542;
+    font-weight: 500;
+  }
+
+  .micro-narrative.italic {
+    font-style: italic;
+    color: rgb(156, 163, 175);
+  }
+
+  /* Hero button spacing */
+  .hero-buttons {
+    margin-top: 2rem;
+  }
+
+  /* Hero text block with blur background */
+  .hero-text-block {
+    background: rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(4px);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 600px;
+  }
+
+  /* Scroll-triggered fade-up animation */
+  @keyframes scrollFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-scroll-fade {
+    animation: scrollFadeUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  /* Gold glow for buttons */
+  .btn-primary {
+    position: relative;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.4) 0%, transparent 70%);
+    border-radius: 50px;
+    z-index: -1;
+    filter: blur(12px);
+  }
+
+  .btn-primary:hover::before {
+    background: radial-gradient(circle, rgba(255, 204, 0, 0.6) 0%, transparent 70%);
+  }
+
+  /* Heritage badge cluster */
+  .heritage-cluster {
+    @apply flex gap-3 flex-wrap justify-start;
+  }
+
+  .heritage-item {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300;
+    background: rgba(255, 204, 0, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 204, 0, 0.4);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fcd34d;
+    box-shadow:
+      0 4px 12px rgba(255, 204, 0, 0.2),
+      0 0 20px rgba(255, 204, 0, 0.15),
+      inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  }
+
+  .heritage-item:hover {
+    background: rgba(255, 204, 0, 0.15);
+    border-color: rgba(255, 204, 0, 0.6);
+    box-shadow:
+      0 6px 20px rgba(255, 204, 0, 0.3),
+      0 0 30px rgba(255, 204, 0, 0.25),
+      inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+
+  /* Enhance accent line glow */
+  .accent-line {
+    height: 2px;
+    width: 120px;
+    background: linear-gradient(90deg, #ce1126 0%, #ffcc00 50%, #007a5e 100%);
+    box-shadow: 0 0 12px rgba(255, 204, 0, 0.45);
+    animation: accentGlow 3s ease-in-out infinite;
+    margin: 1.5rem 0;
+  }
+
+  /* Ghana flag gradient divider behind text */
+  .ghana-gradient-bg {
+    position: relative;
+  }
+
+  .ghana-gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(206, 17, 38, 0.05) 0%, rgba(255, 204, 0, 0.03) 50%, rgba(0, 122, 94, 0.05) 100%);
+    pointer-events: none;
+  }
+}
